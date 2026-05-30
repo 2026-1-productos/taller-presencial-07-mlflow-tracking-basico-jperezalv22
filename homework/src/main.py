@@ -27,6 +27,7 @@ def main():
     )
 
     ## Se inicia un experimento en MLflow
+    mlflow.set_tracking_uri("mlruns")
     mlflow.set_experiment("wine_quality_experiment")
     run_name = f"{args.model}_{uuid.uuid4().hex[:8]}"
     with mlflow.start_run(run_name=run_name):
