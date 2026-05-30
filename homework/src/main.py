@@ -36,7 +36,7 @@ def main():
         mlflow.log_param("test_size", TEST_SIZE)
         mlflow.log_param("random_state", RANDOM_STATE)
         mlflow.log_param("model_type", args.model)
-
+#
         ## Log de los parametros especificos de cada tipo de modelo
         if args.model == "elasticnet":
             mlflow.log_param("alpha", args.alpha)
